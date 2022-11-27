@@ -28,15 +28,14 @@ if (isset($_POST["submit"])){
     // jalankan query 
     if (mysqli_query($con,$sql)) {
         echo "Data berhasil ditambah";
-    }else{
-        echo "Ada error ". mysqli_error();
+    } else {
+        echo "Ada error " .$sql. "<br> . mysqli_error();
     }
-
     mysqli_close($con);
+}
 
 ?>
-
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +44,7 @@ if (isset($_POST["submit"])){
     <title>Tambah Data Mahasiswa</title>
 </head>
 <body>
-    <form action="insert.php" method="post"> 
+    <form action="update.php" method="post"> 
         NIM: <input type="text" name="nim"><br>
         Nama: <input type="text" name="nama"><br>
         ID Jurusan: <input type="number" name="id_jurusan"><br>

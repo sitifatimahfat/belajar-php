@@ -38,15 +38,20 @@ mysqli_close($con);
 </head>
 <body>
     <h1>Data Mahasiswa</h1>
+    <a href="insert.php">Tambah Data</a>
     <table border="1" style="width:100%;">
         <tr>
             <th>NIM</th>
             <th>Nama</th>
+            <th>Tempat Lahir</th>
+            <th>Action</th>
         </tr>
         <?php foreach($mahasiswa as $value): ?>
         <tr>
             <td><?php echo $value["nim"]; ?></td>
             <td><?php echo $value["nama"]; ?></td>
+            <td><?php echo $value["tempat_lahir"]; ?></td>
+            <td>Edit | Delete </td>
         </tr>
         <?php endforeach; ?>
     </table>
