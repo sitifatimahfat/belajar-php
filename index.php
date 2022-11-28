@@ -51,7 +51,10 @@ mysqli_close($con);
             <td><?php echo $value["nim"]; ?></td>
             <td><?php echo $value["nama"]; ?></td>
             <td><?php echo $value["tempat_lahir"]; ?></td>
-            <td>Edit | Delete </td>
+            <td>
+                <a href= "<?php echo "update.php?id=".$value["id"]; ?>">Edit</a>
+                <a href= "<?php echo "update.php?id=".$value["id"]; ?>">Delete</a>
+            </td>
         </tr>
         <?php endforeach; ?>
     </table>
